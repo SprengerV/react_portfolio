@@ -57,7 +57,7 @@ const Projects = () => {
               alt={ p.label }
             />
             <Carousel.Caption className="text-dark">
-              <h2>{ p.label }</h2>
+              <h3>{ p.label }</h3>
               <p>{ p.caption }</p>
               <div className="container-fluid">
                 <div className="row d-inline-flex">  

@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Header from '../header';
 import './navbar.css';
 
+const dict = {
+  '/': 'Home',
+  '/projects': 'Projects',
+  '/contact': 'Contact'
+}
+
 const Navbar = () => {
-  return (
+  const [page, setPage] = useState(dict[window.location.pathname]);
+
+  return (<>  
     <nav className="navbar navbar-expand-md navbar-dark bg-secondary" id="navbar">
       <div className="container-fluid">
         <Link className="navbar-brand ms-md-3" to="/">
@@ -22,6 +31,7 @@ const Navbar = () => {
                     : "nav-link"
                 } 
                 to="/"
+                onClick={ () => setPage('Home') }
               >
                 Home
               </Link>
@@ -34,6 +44,7 @@ const Navbar = () => {
                     : "nav-link"
                 }
                 to="/projects"
+                onClick={ () => setPage('Projects') }
               >
                 Projects
               </Link>
@@ -46,6 +57,7 @@ const Navbar = () => {
                     : "nav-link"
                 }
                 to="/contact"
+                onClick={ () => setPage('Contact') }
               >
                 Contact
               </Link>
@@ -54,7 +66,8 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-  );
+    <Header value={ page }/>
+  </>);
 };
 
 export default Navbar;
