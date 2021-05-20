@@ -7,17 +7,16 @@ import Projects from './views/projects';
 import './App.css';
 
 function App() {
-  return (
+  return ( 
+  <div>  
+    
     <Router>
-      <div>  
-        <Navbar/>
-        <main>
-          <Route exact path="/" component={Home}/>
-          <Route exact path="/contact" component={Contact}/>
-          <Route exact path="/projects" component={Projects}/>
-        </main>
-      </div>
+      <Navbar/>
+      <Route exact path="/" component={Home}/>
+      <Route exact path="/contact" component={Contact}/>
+      <Route exact path="/projects" component={Projects}/>
     </Router>
+  </div>
   );
 }
 
