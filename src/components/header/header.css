@@ -1,6 +1,4 @@
-/* #header {
-    margin-top: 7vh;
-    background-color: white;
-    border: 4px solid darkgray;
-    height: 8vh;
-} */
+#hedr {
+    background-color: rgba(182, 182, 182, 0.171);
+    border-color: #24d3bb #75ffed #24003b #602a66 !important;
+}

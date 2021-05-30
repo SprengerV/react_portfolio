@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
 import Navbar from './components/navbar';
 import Home from './views/home';
 import Contact from './views/contact';
@@ -10,8 +11,8 @@ function App() {
   const [header, setHeader] = useState('Home');
 
   return ( 
-    <div>  
-      <Router>
+    <Router>
+      <Container fluid={ true }>
         <Navbar/>
         <Route
           exact path="/"
@@ -25,8 +26,8 @@ function App() {
           exact path="/projects"
           component={ Projects }
         />
-      </Router>
-    </div>
+      </Container>
+    </Router>
   );
 }
 

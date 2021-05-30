@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Nav, Navbar as NavB } from 'react-bootstrap';
+import { Container, Nav, Navbar as NavB, Row } from 'react-bootstrap';
 import Header from '../header';
 import './navbar.css';
 
@@ -14,8 +14,9 @@ const Navbar = () => {
   const [page, setPage] = useState(dict[window.location.pathname]);
 
   return (<>  
-    <NavB bg="p-dark" variant="dark" id="navbar">
-      <div className="mt-0 mb-1 bg-primary container-fluid d-flex justify-content-center justify-content-md-end">
+    <Row id="navbar" className="bg-p-dark ">
+      <NavB bg="primary" className="w-100 navbar-fluid mb-2">
+        <Container fluid={true} className="d-flex justify-content-center justify-content-md-end">
         <NavB.Brand>
           <Link to="/" className="linkyBoi text-white">
             Brendan Francis
@@ -60,8 +61,9 @@ const Navbar = () => {
             Contact
           </Link>
         </Nav.Link>
-      </div>
-    </NavB>
+        </Container>
+      </NavB>
+    </Row>
     <Header value={ page }/>
   </>);
 };
