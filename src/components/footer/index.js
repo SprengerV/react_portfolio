@@ -1,11 +1,15 @@
 import React from 'react';
-import './footer.css';
+import { Nav, Navbar } from 'react-bootstrap';
 
 const Footer = () => {
   return (
-    <div className="fixed-bottom text-white bg-secondary container-fluid text-center d-flex flex-column justify-content-center" id="footer">
-      <div>Sprenger V LLC, 2020</div>
-    </div>
+    <Nav className="bg-p-dark fixed-bottom navbar-dark d-flex align-items-end" id="footer">
+      <Navbar className="bg-primary w-100 mt-2">
+        <span className="ms-auto me-auto text-white">
+          Sprenger V LLC, 2020
+        </span>
+      </Navbar>
+    </Nav>
   );
 };
 

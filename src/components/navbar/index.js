@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Nav, Navbar as NavB, Navlink, Button, ListGroup } from 'react-bootstrap';
 import Header from '../header';
 import './navbar.css';
 
@@ -13,17 +14,14 @@ const Navbar = () => {
   const [page, setPage] = useState(dict[window.location.pathname]);
 
   return (<>  
-    <nav className="navbar navbar-expand-md navbar-dark bg-primary" id="navbar">
-      <div className="container-fluid">
+    <Navbar expand="md" bg="p-dark" variant="primary" className="container d-flex align-items-start" id="navbar">
+      <div className="mb-2">
         <Link className="navbar-brand ms-md-3" to="/">
           Brendan Francis
         </Link>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarCollapse">
-          <ul className="navbar-nav ms-auto me-3 mb-2">  
-            <li className="nav-item">
+        <Navbar.Toggle aria-controls="navCollapse"/>        <Navbar.Collapse id="navCollapse">  
+          <ListGroup>
+            <ListGroup.Item className="nav-item">
               <Link 
                 className={
                   window.location.pathname === "/"
@@ -35,8 +33,8 @@ const Navbar = () => {
               >
                 Home
               </Link>
-            </li>
-            <li className="nav-item">
+            </ListGroup.Item>
+            <ListGroup.Item className="nav-item">
               <Link 
                 className={
                   window.location.pathname === "/projects"
@@ -48,8 +46,8 @@ const Navbar = () => {
               >
                 Projects
               </Link>
-            </li>
-            <li className="nav-item">
+            </ListGroup.Item>
+            <ListGroup.Item className="nav-item">
               <Link
                 className={
                   window.location.pathname === "/contact"
@@ -61,11 +59,11 @@ const Navbar = () => {
               >
                 Contact
               </Link>
-            </li>
-          </ul>
-        </div>
+            </ListGroup.Item>
+          </ListGroup>
+        </Navbar.Collapse>
       </div>
-    </nav>
+    </Navbar>
     <Header value={ page }/>
   </>);
 };
