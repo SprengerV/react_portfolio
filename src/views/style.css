@@ -1,3 +1,12 @@
+.contact {
+    min-height: 45vh;
+}
+.iii {
+    font-size: 24px;
+}
+.social {
+    border-radius: 50px;
+}
 #carouselWrapper {
-    margin-top: 4vh;
+    margin-top: 2vh;
 }
