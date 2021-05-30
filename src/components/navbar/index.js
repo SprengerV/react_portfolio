@@ -13,7 +13,7 @@ const Navbar = () => {
   const [page, setPage] = useState(dict[window.location.pathname]);
 
   return (<>  
-    <nav className="navbar navbar-expand-md navbar-dark bg-secondary" id="navbar">
+    <nav className="navbar navbar-expand-md navbar-dark bg-primary" id="navbar">
       <div className="container-fluid">
         <Link className="navbar-brand ms-md-3" to="/">
           Brendan Francis

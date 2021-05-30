@@ -1,0 +1,18 @@
+$enable-shadows: true;
+$enable-gradients: true;
+$enable-rounded: true;
+$primary: #602a66;
+$p-light: #8f5694;
+$p-dark: #24003b;
+$secondary: #24d3bb;
+$s-light: #75ffed;
+$s-dark: #00a18b;
+$theme-colors: (
+  "primary": $primary,
+  "p-light": $p-light,
+  "p-dark": $p-dark,
+  "secondary": $secondary,
+  "s-light": $s-light,
+  "s-dark": $s-dark
+);
+@import '../node_modules/bootstrap/scss/bootstrap.scss';

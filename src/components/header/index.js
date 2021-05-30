@@ -1,11 +1,12 @@
 import React from 'react';
+import { Card } from 'react-bootstrap';
 import './header.css';
 
 const Header = ({ value }) => {
     return (
-        <header id="header" className="col-4 ms-auto me-auto d-flex flex-column justify-content-center text-center">
+        <Card variant="p-dark" className="border-s-dark text-p-dark col-4 ms-auto me-auto d-flex align-items-center text-center">
             <h2>{ value }</h2>
-        </header>
+        </Card>
     );
 };
 
