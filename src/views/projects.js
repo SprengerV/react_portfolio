@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from '../components/footer';
-import Carousel from 'react-bootstrap/Carousel';
+// import Carousel from 'react-bootstrap/Carousel';
+import { Carousel, Card } from 'react-bootstrap';
 import quick_lookup from '../assets/img/quick_lookup.jpg';
 import './style.css';
 
@@ -47,8 +48,8 @@ const Projects = () => {
 
   return (
     <main>
-      <div id="carouselWrapper" className="col-7 ms-auto me-auto">
-        <Carousel >
+      <Card id="carouselWrapper" border="p-dark" bg="light" className="col-11 col-md-9 col-lg-8 col-xl-7 ms-auto me-auto">
+        <Carousel className="mb-4 ms-4 me-4 mt-4">
           { ps.map((p, i) => 
           <Carousel.Item key={ i }>
             <img 
@@ -73,7 +74,7 @@ const Projects = () => {
           </Carousel.Item>
           ) }
         </Carousel>
-      </div>
+      </Card>
       <Footer/>
     </main>
   );

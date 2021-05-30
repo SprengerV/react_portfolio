@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Nav, Navbar as NavB, Navlink, Button, ListGroup } from 'react-bootstrap';
+import { Nav, Navbar as NavB } from 'react-bootstrap';
 import Header from '../header';
 import './navbar.css';
 
@@ -14,56 +14,54 @@ const Navbar = () => {
   const [page, setPage] = useState(dict[window.location.pathname]);
 
   return (<>  
-    <Navbar expand="md" bg="p-dark" variant="primary" className="container d-flex align-items-start" id="navbar">
-      <div className="mb-2">
-        <Link className="navbar-brand ms-md-3" to="/">
-          Brendan Francis
-        </Link>
-        <Navbar.Toggle aria-controls="navCollapse"/>        <Navbar.Collapse id="navCollapse">  
-          <ListGroup>
-            <ListGroup.Item className="nav-item">
-              <Link 
-                className={
-                  window.location.pathname === "/"
-                    ? "nav-link active"
-                    : "nav-link"
-                } 
-                to="/"
-                onClick={ () => setPage('Home') }
-              >
-                Home
-              </Link>
-            </ListGroup.Item>
-            <ListGroup.Item className="nav-item">
-              <Link 
-                className={
-                  window.location.pathname === "/projects"
-                    ? "nav-link active"
-                    : "nav-link"
-                }
-                to="/projects"
-                onClick={ () => setPage('Projects') }
-              >
-                Projects
-              </Link>
-            </ListGroup.Item>
-            <ListGroup.Item className="nav-item">
-              <Link
-                className={
-                  window.location.pathname === "/contact"
-                    ? "nav-link active"
-                    : "nav-link"
-                }
-                to="/contact"
-                onClick={ () => setPage('Contact') }
-              >
-                Contact
-              </Link>
-            </ListGroup.Item>
-          </ListGroup>
-        </Navbar.Collapse>
+    <NavB bg="p-dark" variant="dark" id="navbar">
+      <div className="mt-0 mb-1 bg-primary container-fluid d-flex justify-content-center justify-content-md-end">
+        <NavB.Brand>
+          <Link to="/" className="linkyBoi text-white">
+            Brendan Francis
+          </Link>
+        </NavB.Brand>
+        <Nav.Link>
+          <Link 
+            className={
+              window.location.pathname === "/"
+                ? "nav-link link-s-dark"
+                : "nav-link link-p-dark"
+            } 
+            to="/"
+            onClick={ () => setPage('Home') }
+          >
+            Home
+          </Link>
+        </Nav.Link>
+        <Nav.Link>
+          <Link 
+            className={
+              window.location.pathname === "/projects"
+              ? "nav-link link-s-dark"
+              : "nav-link link-p-dark"
+            }
+            to="/projects"
+            onClick={ () => setPage('Projects') }
+          >
+            Projects
+          </Link>
+        </Nav.Link>
+        <Nav.Link>
+          <Link
+            className={
+              window.location.pathname === "/contact"
+              ? "nav-link link-s-dark"
+              : "nav-link link-p-dark"
+            }
+            to="/contact"
+            onClick={ () => setPage('Contact') }
+          >
+            Contact
+          </Link>
+        </Nav.Link>
       </div>
-    </Navbar>
+    </NavB>
     <Header value={ page }/>
   </>);
 };
