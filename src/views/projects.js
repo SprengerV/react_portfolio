@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from '../components/footer';
 // import Carousel from 'react-bootstrap/Carousel';
-import { Carousel, Card } from 'react-bootstrap';
+import { Carousel, Card, Container, Row, Col } from 'react-bootstrap';
 import quick_lookup from '../assets/img/quick_lookup.jpg';
 import './style.css';
 
@@ -48,28 +48,33 @@ const Projects = () => {
 
   return (
     <main>
-      <Card id="carouselWrapper" border="p-dark" bg="light" className="col-11 col-md-9 col-lg-8 col-xl-7 ms-auto me-auto">
-        <Carousel className="mb-4 ms-4 me-4 mt-4">
+      <Card border="p-dark" className="content col-11 col-md-9 col-lg-8 col-xl-7 ms-auto me-auto mt-4">
+        <Carousel className="mb-2 ms-4 me-4 mt-2">
           { ps.map((p, i) => 
           <Carousel.Item key={ i }>
-            <img 
+            <img
+              id="carol"
               className="d-block w-100"
               src={ p.imgSrc }
               alt={ p.label }
             />
             <Carousel.Caption className="text-dark">
-              <h3>{ p.label }</h3>
-              <p>{ p.caption }</p>
-              <div className="container-fluid">
-                <div className="row d-inline-flex">  
-                  <a href={ p.repo } target="_blank" rel="noreferrer" className="col-5 mx-2 text-center">
-                    Repository  
-                  </a>
-                  <a href={ p.deploy } target="_blank" rel="noreferrer" className="col-5 mx-2 text-center">
-                    Deployment  
-                  </a>
-                </div>
-              </div>
+              <h3 className="text-s-dark">{ p.label }</h3>
+              <p className="text-p-dark">{ p.caption }</p>
+              <Container fluid={ true }>
+                <Row className="d-inline-flex">  
+                  <Col xs="6" className="text-nowrap">
+                    <a href={ p.repo } target="_blank" rel="noreferrer" className="link-s-dark col-5 mx-2 text-center">
+                      Repository  
+                    </a>
+                  </Col>
+                  <Col xs="6" className="text-nowrap">
+                    <a href={ p.deploy } target="_blank" rel="noreferrer" className="link-s-dark col-5 mx-2 text-center">
+                      Deployment  
+                    </a>
+                  </Col>
+                </Row>
+              </Container>
             </Carousel.Caption>
           </Carousel.Item>
           ) }
