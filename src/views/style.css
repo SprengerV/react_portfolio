@@ -1,3 +1,19 @@
-#carouselWrapper {
-    margin-top: 4vh;
+.contact {
+    min-height: 36vh;
+}
+.content {
+    background-color: rgba(254, 255, 255, 0.719);
+}
+.iii {
+    font-size: 24px;
+}
+.main {
+    text-align: justify;
+}
+.social {
+    border-radius: 50px;
+}
+#carol {
+    border-radius: 16px;
+    padding: 0 -20px 0 -20px;
 }

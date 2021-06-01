@@ -1,12 +1,14 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Row, Card } from 'react-bootstrap';
 import './header.css';
 
 const Header = ({ value }) => {
     return (
-        <Card variant="p-dark" className="border-s-dark text-p-dark col-4 ms-auto me-auto d-flex align-items-center text-center">
-            <h2>{ value }</h2>
-        </Card>
+        <Row>
+            <Card id="hedr" className="text-p-dark col-11 col-md-8 col-lg-4 col-xl-3 ms-auto me-auto mb-4 text-center">
+                <h2 className="mt-3 mb-3">{ value }</h2>
+            </Card>
+        </Row>
     );
 };
 
