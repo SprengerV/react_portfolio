@@ -3,6 +3,11 @@ import Footer from '../components/footer';
 // import Carousel from 'react-bootstrap/Carousel';
 import { Carousel, Card, Container, Row, Col } from 'react-bootstrap';
 import quick_lookup from '../assets/img/quick_lookup.jpg';
+import keygen from '../assets/img/keygen.jpg';
+import techl0rd from '../assets/img/techl0rd.jpg';
+import b00kzearch from '../assets/img/b00kzearch.jpg';
+import dinnerdate from '../assets/img/dinnerdate.jpg';
+import dndtracker from '../assets/img/dndtracker.jpg';
 import './style.css';
 
 const Projects = () => { 
@@ -14,36 +19,41 @@ const Projects = () => {
       repo: 'https://github.com/SprengerV/',
       deploy: 'https://sprengerv.github.io/quick_lookup/'
     },
-    // {
-    //   imgSrc: './images/',
-    //   label: '',
-    //   caption: '',
-    //   repo: 'https://github.com/SprengerV/'
-    // },
-    // {
-    //   imgSrc: './images/',
-    //   label: '',
-    //   caption: '',
-    //   repo: 'https://github.com/SprengerV/'
-    // },
-    // {
-    //   imgSrc: './images/',
-    //   label: '',
-    //   caption: '',
-    //   repo: 'https://github.com/SprengerV/'
-    // },
-    // {
-    //   imgSrc: './images/',
-    //   label: '',
-    //   caption: '',
-    //   repo: 'https://github.com/SprengerV/'
-    // },
-    // {
-    //   imgSrc: './images/',
-    //   label: '',
-    //   caption: '',
-    //   repo: 'https://github.com/SprengerV/'
-    // }
+    {
+      imgSrc: keygen,
+      label: 'Keygen',
+      caption: 'A password generator web app built in HTML, CSS, and Javascript',
+      repo: 'https://github.com/SprengerV/password_generator',
+      deploy: 'https://sprengerv.github.io/password_generator/'
+    },
+    {
+      imgSrc: techl0rd,
+      label: 'techl0rd Blog',
+      caption: 'A blog site with authentication that allows user to make posts and edit posts and leave comments',
+      repo: 'https://github.com/SprengerV/techl0rd_blog',
+      deploy: 'https://techl0rd.herokuapp.com/'
+    },
+    {
+      imgSrc: b00kzearch,
+      label: 'b00kzearch',
+      caption: 'A MERN app that utilizes Google Books API to search for and save books',
+      repo: 'https://github.com/SprengerV/b00kzearch',
+      deploy: 'https://b00kzearch.herokuapp.com/'
+    },
+    {
+      imgSrc: dinnerdate,
+      label: 'Dinner-Date',
+      caption: 'My first group project. Uses 2 external APIs to generate movie and dinner combos for date ideas',
+      repo: 'https://github.com/SprengerV/dinner-date',
+      deploy: 'https://sprengerv.github.io/dinner-date/'
+    },
+    {
+      imgSrc: dndtracker,
+      label: 'DandD Tracker',
+      caption: 'My second group project. Uses auth0 and allows users to create and save characters for their Dungeons and Dragons campaigns',
+      repo: 'https://github.com/SprengerV/DandD_tracker',
+      deploy: 'https://dnd-trackz0rz.herokuapp.com/'
+    }
   ];
 
   return (
