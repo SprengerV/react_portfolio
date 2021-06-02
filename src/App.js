@@ -15,7 +15,7 @@ function App() {
       <Container fluid={ true }>
         <Navbar/>
         <Route
-          exact path="/"
+          path="/"
           component={ Home }
         />
         <Route
