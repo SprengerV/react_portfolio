@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, withRouter } from 'react-router-dom';
 import { Container, Nav, Navbar as NavB, Row } from 'react-bootstrap';
 import Header from '../header';
 import './navbar.css';
@@ -10,8 +10,14 @@ const dict = {
   '/contact': 'Contact'
 }
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [page, setPage] = useState('Home');
+
+  useEffect(() => {
+    if (props.location === '/') {
+      setPage('Home');
+    }
+  }, [setPage, props])
 
   return (<>  
     <Row id="navbar" className="bg-p-dark ">
@@ -68,4 +74,4 @@ const Navbar = () => {
   </>);
 };
 
-export default Navbar;
+export default withRouter(Navbar);
