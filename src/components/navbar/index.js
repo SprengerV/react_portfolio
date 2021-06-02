@@ -11,7 +11,7 @@ const dict = {
 }
 
 const Navbar = () => {
-  const [page, setPage] = useState(dict[window.location.pathname]);
+  const [page, setPage] = useState('Home');
 
   return (<>  
     <Row id="navbar" className="bg-p-dark ">
