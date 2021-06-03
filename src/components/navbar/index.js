@@ -31,7 +31,7 @@ const Navbar = (props) => {
         <Nav.Link>
           <Link 
             className={
-              window.location.pathname === "/react_portfolio/"
+              page === "Home"
                 ? "nav-link link-s-dark"
                 : "nav-link link-p-dark"
             } 
@@ -44,7 +44,7 @@ const Navbar = (props) => {
         <Nav.Link>
           <Link 
             className={
-                window.location.pathname === "/react_portfolio/projects"
+                page === "Projects"
               ? "nav-link link-s-dark"
               : "nav-link link-p-dark"
             }
@@ -57,7 +57,7 @@ const Navbar = (props) => {
         <Nav.Link>
           <Link
             className={
-                window.location.pathname === "/react_portfolio/contact"
+                page === "Contact"
               ? "nav-link link-s-dark"
               : "nav-link link-p-dark"
             }
