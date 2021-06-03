@@ -8,22 +8,20 @@ import Projects from './views/projects';
 import './App.css';
 
 function App() {
-  const [header, setHeader] = useState('Home');
-
   return ( 
     <Router>
       <Container fluid={ true }>
         <Navbar/>
         <Route
-          exact path="/"
+          exact path={ ["/react_portfolio/","/"] }
           component={ Home }
         />
         <Route
-          exact path="/contact"
+          exact path="/react_portfolio/contact"
           component={ Contact }
         />
         <Route
-          exact path="/projects"
+          exact path="/react_portfolio/projects"
           component={ Projects }
         />
       </Container>

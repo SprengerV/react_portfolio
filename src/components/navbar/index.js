@@ -5,16 +5,16 @@ import Header from '../header';
 import './navbar.css';
 
 const dict = {
-  '/': 'Home',
-  '/projects': 'Projects',
-  '/contact': 'Contact'
+  '/react_portfolio/': 'Home',
+  '/react_portfolio/projects': 'Projects',
+  '/react_portfolio/contact': 'Contact'
 }
 
 const Navbar = (props) => {
   const [page, setPage] = useState('Home');
 
   useEffect(() => {
-    if (props.location === '/' || !props.location) {
+    if (props.location === '/react_portfolio/' || !props.location) {
       setPage('Home');
     }
   }, [setPage, props])
@@ -24,18 +24,18 @@ const Navbar = (props) => {
       <NavB bg="primary" className="w-100 navbar-fluid mb-2">
         <Container fluid={true} className="d-flex justify-content-center justify-content-md-end">
         <NavB.Brand>
-          <Link to="/" className="linkyBoi text-white">
+            <Link to="/react_portfolio/" className="linkyBoi text-white">
             Brendan Francis
           </Link>
         </NavB.Brand>
         <Nav.Link>
           <Link 
             className={
-              window.location.pathname === "/"
+              window.location.pathname === "/react_portfolio/"
                 ? "nav-link link-s-dark"
                 : "nav-link link-p-dark"
             } 
-            to="/"
+              to="/react_portfolio/"
             onClick={ () => setPage('Home') }
           >
             Home
@@ -44,11 +44,11 @@ const Navbar = (props) => {
         <Nav.Link>
           <Link 
             className={
-              window.location.pathname === "/projects"
+                window.location.pathname === "/react_portfolio/projects"
               ? "nav-link link-s-dark"
               : "nav-link link-p-dark"
             }
-            to="/projects"
+              to="/react_portfolio/projects"
             onClick={ () => setPage('Projects') }
           >
             Projects
@@ -57,11 +57,11 @@ const Navbar = (props) => {
         <Nav.Link>
           <Link
             className={
-              window.location.pathname === "/contact"
+                window.location.pathname === "/react_portfolio/contact"
               ? "nav-link link-s-dark"
               : "nav-link link-p-dark"
             }
-            to="/contact"
+              to="/react_portfolio/contact"
             onClick={ () => setPage('Contact') }
           >
             Contact
