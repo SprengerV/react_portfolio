@@ -14,7 +14,7 @@ const Navbar = (props) => {
   const [page, setPage] = useState('Home');
 
   useEffect(() => {
-    if (props.location === '/') {
+    if (props.location === '/' || !props.location) {
       setPage('Home');
     }
   }, [setPage, props])
